@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\win32_platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\platform_common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\platform_common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3CF975A4-0F93-42BE-9D18-B5752B4D8A1D}|Pong\\Pong.vcxproj|solutionrelative:Pong\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\game.cpp",
+              "RelativeDocumentMoniker": "Pong\\game.cpp",
+              "ToolTip": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\game.cpp",
+              "RelativeToolTip": "Pong\\game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-22T18:51:51.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "utils.cpp",
               "DocumentMoniker": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\utils.cpp",
               "RelativeDocumentMoniker": "Pong\\utils.cpp",
@@ -35,18 +56,30 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-22T17:28:16.243Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "platform_common.cpp",
+              "DocumentMoniker": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\platform_common.cpp",
+              "RelativeDocumentMoniker": "Pong\\platform_common.cpp",
+              "ToolTip": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\platform_common.cpp",
+              "RelativeToolTip": "Pong\\platform_common.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-22T18:14:32.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "renderer.cpp",
               "DocumentMoniker": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\renderer.cpp",
               "RelativeDocumentMoniker": "Pong\\renderer.cpp",
               "ToolTip": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\renderer.cpp",
               "RelativeToolTip": "Pong\\renderer.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-21T18:58:38.975Z",
               "EditorCaption": ""
@@ -59,7 +92,7 @@
               "RelativeDocumentMoniker": "Pong\\win32_platform.cpp",
               "ToolTip": "C:\\Users\\Melissa\\Documents\\GitHub\\Pong\\Pong\\Pong\\win32_platform.cpp",
               "RelativeToolTip": "Pong\\win32_platform.cpp",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAewFAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-20T18:24:57.938Z",
               "EditorCaption": ""

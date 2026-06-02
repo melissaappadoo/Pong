@@ -27,6 +27,22 @@ draw_rect_in_pixels(int x0, int y0, int x1, int y1, u32 colour) {
 global_variable float render_scale = 0.01f;
 
 internal void
+draw_arena_borders(float arena_x, float arena_y, u32 colour) {
+	arena_x *= render_state.height * render_scale;
+	arena_y *= render_state.height * render_scale;
+	
+	int x0 = (int)((float)render_state.width * .5f - arena_x);
+	int x1 = (int)((float)render_state.width * .5f + arena_x);
+	int y0 = (int)((float)render_state.height * .5f - arena_y);
+	int y1 = (int)((float)render_state.height * .5f + arena_y);
+
+	draw_rect_in_pixels(0, 0, render_state.width, y0, colour);
+	draw_rect_in_pixels(0, y1, x1, render_state.height, colour);
+	draw_rect_in_pixels(0, y0, x0, y1, colour);
+	draw_rect_in_pixels(x1, y0, render_state.width, render_state.height, colour);
+}
+
+internal void
 draw_rect(float x, float y, float half_size_x, float half_size_y, u32 colour) {
 
 	x *= render_state.height*render_scale;
@@ -44,6 +60,245 @@ draw_rect(float x, float y, float half_size_x, float half_size_y, u32 colour) {
 	int y1 = y + half_size_y;
 
 	draw_rect_in_pixels(x0, y0, x1, y1, colour);
+}
+
+const char* letters[][7] = {
+	" 00",
+	"0  0",
+	"0  0",
+	"0000",
+	"0  0",
+	"0  0",
+	"0  0",
+
+	"000",
+	"0  0",
+	"0  0",
+	"000",
+	"0  0",
+	"0  0",
+	"000",
+
+	" 000",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	" 000",
+
+	"000",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"000",
+
+	"0000",
+	"0",
+	"0",
+	"000",
+	"0",
+	"0",
+	"0000",
+
+	"0000",
+	"0",
+	"0",
+	"000",
+	"0",
+	"0",
+	"0",
+
+	" 000",
+	"0",
+	"0",
+	"0 00",
+	"0  0",
+	"0  0",
+	" 000",
+
+	"0  0",
+	"0  0",
+	"0  0",
+	"0000",
+	"0  0",
+	"0  0",
+	"0  0",
+
+	"000",
+	" 0",
+	" 0",
+	" 0",
+	" 0",
+	" 0",
+	"000",
+
+	" 000",
+	"   0",
+	"   0",
+	"   0",
+	"0  0",
+	"0  0",
+	" 000",
+
+	"0  0",
+	"0  0",
+	"0 0",
+	"00",
+	"0 0",
+	"0  0",
+	"0  0",
+
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0000",
+
+	"00 00",
+	"0 0 0",
+	"0 0 0",
+	"0   0",
+	"0   0",
+	"0   0",
+	"0   0",
+
+	"00  0",
+	"0 0 0",
+	"0 0 0",
+	"0 0 0",
+	"0 0 0",
+	"0 0 0",
+	"0  00",
+
+	"0000",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0000",
+
+	" 000",
+	"0  0",
+	"0  0",
+	"000",
+	"0",
+	"0",
+	"0",
+
+	" 000 ",
+	"0   0",
+	"0   0",
+	"0   0",
+	"0 0 0",
+	"0  0 ",
+	" 00 0",
+
+	"000",
+	"0  0",
+	"0  0",
+	"000",
+	"0  0",
+	"0  0",
+	"0  0",
+
+	" 000",
+	"0",
+	"0 ",
+	" 00",
+	"   0",
+	"   0",
+	"000 ",
+
+	"000",
+	" 0",
+	" 0",
+	" 0",
+	" 0",
+	" 0",
+	" 0",
+
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	"0  0",
+	" 00",
+
+	"0   0",
+	"0   0",
+	"0   0",
+	"0   0",
+	"0   0",
+	" 0 0",
+	"  0",
+
+	"0   0 ",
+	"0   0",
+	"0   0",
+	"0 0 0",
+	"0 0 0",
+	"0 0 0",
+	" 0 0 ",
+
+	"0   0",
+	"0   0",
+	" 0 0",
+	"  0",
+	" 0 0",
+	"0   0",
+	"0   0",
+
+	"0   0",
+	"0   0",
+	" 0 0",
+	"  0",
+	"  0",
+	"  0",
+	"  0",
+
+	"0000",
+	"   0",
+	"  0",
+	" 0",
+	"0",
+	"0",
+	"0000",
+};
+
+internal void
+draw_text(const char *text, float x, float y, float size, u32 colour) {
+	float half_size = size * .5f;
+	float original_y = y;
+
+	while (*text) {
+		if (*text != 32) {
+			const char** a_letter = letters[*text - 'A'];
+			float original_x = x;
+
+			for (int i = 0; i < 7; i++) {
+				const char* row = a_letter[i];
+				while (*row) {
+					if (*row == '0') {
+						draw_rect(x, y, half_size, half_size, colour);
+					}
+					x += size;
+					row++;
+				}
+				y -= size;
+				x = original_x;
+			}
+		}
+		text++;
+		x += size * 6.f;
+		y = original_y;
+	}
 }
 
 internal void

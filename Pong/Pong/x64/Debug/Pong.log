@@ -11,7 +11,7 @@ C:\Users\Melissa\Documents\GitHub\Pong\Pong\Pong\renderer.cpp(43,9): warning C42
 C:\Users\Melissa\Documents\GitHub\Pong\Pong\Pong\renderer.cpp(44,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'win32_platform.cpp')
   
-C:\Users\Melissa\Documents\GitHub\Pong\Pong\Pong\renderer.cpp(76,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Melissa\Documents\GitHub\Pong\Pong\Pong\renderer.cpp(315,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'win32_platform.cpp')
   
   Pong.vcxproj -> C:\Users\Melissa\Documents\GitHub\Pong\Pong\x64\Debug\Pong.exe
